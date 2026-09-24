@@ -1,0 +1,20 @@
+# ChatGPT Ads MCP Server & Agent Skill
+> Complete specifications, architecture, and agent skill for automating ChatGPT Ads (OpenAI Ads Manager Beta) via Model Context Protocol (MCP) and the OpenAI Advertiser API.
+
+## Documentation & Modules
+- [Main Skill Documentation](skill/SKILL.md): Core agent rules, zero-bias architecture, pre-launch checklist.
+- [OpenAI Advertiser API Specifications](skill/references/advertiser_api_specs.md): Full REST API endpoints (v1), Delta Feeds API, Bulk Mutation Jobs API (DAG), Platform Targeting, and Auth.
+- [Context Hints Engineering Guide](skill/references/context_hints_templates.md): Natural language What-Who-When context hint templates across 5 industries and exclusion hints.
+- [Bulk Upload Schema Checklist](skill/references/bulk_upload_schema.md): 3-tab CSV Bulk Upload specifications, column headers, character constraints.
+- [Conversion Tracking, oppref & CAPI](skill/references/tracking_and_capi.md): oppref Click ID attribution, OpenAI Pixel, SHA-256 Automatic Advanced Matching, Conversions API, and No-JS Image Tag.
+- [Web Crawler Readiness & Product Feeds](skill/references/crawler_and_feed_specs.md): OAI-AdsBot, OAI-SearchBot, Cloudflare WAF allowlisting, robots.txt, 14-day feed sync.
+- [Master Analytical Guide (Vietnamese)](docs/chatgpt_ads_master_guide.md): 13KB comprehensive guide on ChatGPT Ads mechanics and auction dynamics.
+- [MCP Server Product Requirements Document](docs/chatgpt_ads_mcp_prd.md): 14KB technical blueprint for building a ChatGPT Ads MCP Server with 12 Core Tools and Approval-Gated Shield.
+
+## Core Technical Concepts
+- **API Base URL**: `https://api.ads.openai.com/v1`
+- **Click Identifier**: `?oppref=gAAAAAb...` (Privacy-preserving click token preserved across redirects)
+- **Crawler User-Agents**: `OAI-AdsBot` (mandatory review), `OAI-SearchBot` (catalog & images)
+- **Bidding Models**: Views (CPM), Clicks (CPC rec. $3-$5), Conversions (oCPC click billing or CPM impression billing)
+- **Feeds Lifecycle**: Product feeds expire in 14 days; use `PATCH /v1/feeds/{id}/products` for delta price/stock sync
+- **Bulk Jobs**: `POST /v1/bulk_mutation_jobs` supports up to 1,000 DAG operations with amounts in micros
