@@ -1,5 +1,7 @@
 # 🤖 ChatGPT Ads (OpenAI Ads Manager Beta) — Mastery Skill & Engineering Blueprint
 
+**[English](./README.md)** | [Tiếng Việt](./README.vi.md)
+
 [![OpenAI Ads Manager](https://img.shields.io/badge/OpenAI-ChatGPT_Ads_Beta-00A67E?logo=openai&logoColor=white)](https://help.openai.com/en/collections/20001223-chatgpt-ads)
 [![Advertiser API](https://img.shields.io/badge/API-v1-blue.svg)](https://developers.openai.com/ads)
 [![Model Context Protocol](https://img.shields.io/badge/MCP-Compatible-orange?logo=anthropic)](https://modelcontextprotocol.io/)
