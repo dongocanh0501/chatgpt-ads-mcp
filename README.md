@@ -69,7 +69,7 @@ flowchart TD
 ## 📂 Repository Structure
 
 ```
-chatgpt-ads/
+chatgpt-ads-mcp/
 ├── skill/                                    # Ready-to-use Agent Skill
 │   ├── SKILL.md                              # Main Agent Skill (<150 lines, Anti-Rule-Bloat)
 │   └── references/                           # Deep technical modules
