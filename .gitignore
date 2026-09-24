@@ -1,0 +1,11 @@
+# Node / OS artifacts
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# Sensitive environment files
+.env
+.env.local
+*.pem
+credentials.json
